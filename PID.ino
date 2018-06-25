@@ -12,6 +12,8 @@ void setup() {
 void loop() {
   if(Serial.available()>0){
     double error,prev_error=0,desired_output,current_output,Kp,Ki,Kd,i,d,time_change,last_time=0,current_time,output;
+    Serial.println("Enter the desired output");
+    desired_output=Serial.Read();
     while(1){
       
       //Read all the values
